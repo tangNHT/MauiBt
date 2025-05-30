@@ -66,6 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="DashboardApp.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MusicApp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

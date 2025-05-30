@@ -28,21 +28,37 @@ namespace MauiBT
             CounterBtn.Text = $"Click me";
 		}
 
-        private void CreateNewWindow(object sender, EventArgs e)
-        {
-            var page = new ContentPage
-            {
-                Content = new Label { Text = "Hello from new window" }
-            };
+		private void CreateNewWindow(object sender, EventArgs e)
+		{
+			var page = new ContentPage
+			{
+				Content = new Label { Text = "Hello from new window" }
+			};
 
-            var page2 = new MusicApp();
+			var page2 = new MusicApp();
 
-            var newwindow = new Window(page2)
-            {
-                Title = "Sercond window"
-            };
+			var newwindow = new Window(page2)
+			{
+				Title = "Sercond window"
+			};
 
-            Application.Current.OpenWindow(newwindow);
-        }
+			Application.Current.OpenWindow(newwindow);
+		}
+		private void CreateNewWindowDashboradApp(object sender, EventArgs e)
+		{
+			var page = new ContentPage
+			{
+				Content = new Label { Text = "Hello from new window" }
+			};
+
+			var page2 = new DashboardApp();
+
+			var newwindow = new Window(page2)
+			{
+				Title = "Sercond window"
+			};
+
+			Application.Current.OpenWindow(newwindow);
+		}
 	}
 }

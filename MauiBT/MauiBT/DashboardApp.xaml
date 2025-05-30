@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             x:Class="MauiBT.DashboardApp"
+             Title="DashboardApp"
+             Background="White">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10">
+
+            <Grid
+                Grid.Row="0"
+                ColumnDefinitions="3*, 4*, 2*"
+                Margin="0,8,0,0">
+                <Label
+                    Text="Dashboard app"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    FontSize="16"
+                    Margin="50,5,0,0" />
+                <HorizontalStackLayout
+                    Grid.Column="2"
+                    Spacing="5"
+                    HorizontalOptions="End"
+                    Margin="0,0,50,0">
+                    <telerik:RadButton
+                        Text="..."
+                        WidthRequest="40"
+                        HeightRequest="28"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        CornerRadius="5"
+                        Background="#EEEEEE"
+                        TextColor="Black"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        Padding="0,0,0,6" />
+                    <telerik:RadButton
+                        Text="Share"
+                        TextColor="White"
+                        Background="Black"
+                        HeightRequest="30"
+                        CornerRadius="5" />
+
+                    <HorizontalStackLayout
+                        Spacing="3"
+                        Margin="5,0,0,0">
+                        <telerik:RadTemplatedButton
+                            WidthRequest="25"
+                            HeightRequest="25"
+                            CornerRadius="25"
+                            Padding="0">
+                            <Border
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 20">
+                                <Image
+                                    Source="image.png"
+                                    Aspect="AspectFill" />
+                            </Border>
+                        </telerik:RadTemplatedButton>
+                        <Image
+                            Source="down_arrow_icon.png"
+                            WidthRequest="15"
+                            HeightRequest="15"
+                            Aspect="AspectFit" />
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <BoxView
+                HeightRequest="1"
+                BackgroundColor="#E0E0E0" />
+
+            <Grid
+                ColumnDefinitions="3*, 4*, 2*">
+                <Border
+                    Stroke="#F7F7F7"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 3"
+                    HeightRequest="32"
+                    MaximumWidthRequest="140"
+                    HorizontalOptions="Start"
+                    Margin="50,0,0,0">
+                    <HorizontalStackLayout
+                        Background="#F7F7F7"
+                        Padding="0">
+                        <telerik:RadButton
+                            Text="Tab"
+                            Background="White"
+                            TextColor="Black"
+                            MinimumWidthRequest="30" />
+                        <telerik:RadButton
+                            Text="Tab"
+                            TextColor="Black"
+                            MinimumWidthRequest="30" />
+                        <telerik:RadButton
+                            Text="Tab"
+                            TextColor="Black"
+                            MinimumWidthRequest="30" />
+                    </HorizontalStackLayout>
+                </Border>
+                <telerik:RadBorder
+                    Grid.Column="2"
+                    CornerRadius="10"
+                    BorderColor="#EEEEEE"
+                    BorderThickness="1"
+                    HeightRequest="42"
+                    WidthRequest="300"
+                    HorizontalOptions="End"
+                    Margin="0,0,50,0">
+                    <HorizontalStackLayout
+                        VerticalOptions="Center">
+                        <Image
+                            Source="search_icon.png"
+                            HeightRequest="16"
+                            WidthRequest="16"
+                            VerticalOptions="Center"
+                            Margin="8,0,0,0"
+                            Opacity="0.2" />
+                        <Entry
+                            Placeholder="Search..."
+                            TextColor="Black"
+                            PlaceholderColor="#EEEEEE"
+                            FontSize="14"
+                            WidthRequest="260"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center" />
+                    </HorizontalStackLayout>
+                </telerik:RadBorder>
+            </Grid>
+
+            <Grid
+                RowSpacing="20"
+                ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Top Info Cards -->
+                <Border
+                    Margin="50,0,0,0"
+                    Grid.Column="0"
+                    Stroke="#e0e0e0"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 3"
+                    Padding="10">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            TextColor="Black" />
+                        <Label
+                            Text="$45,678.90"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                        <Label
+                            Text="+20% month over month"
+                            FontSize="12"
+                            TextColor="#828282" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    Stroke="#e0e0e0"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 3"
+                    Padding="10">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            TextColor="Black" />
+                        <Label
+                            Text="2,405"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                        <Label
+                            Text="+33% month over month"
+                            FontSize="12"
+                            TextColor="#828282" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border
+                    Margin="0,0,50,0"
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    Stroke="#e0e0e0"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 3"
+                    Padding="10">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            TextColor="Black" />
+                        <Label
+                            Text="10,353"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                        <Label
+                            Text="-8% month over month"
+                            FontSize="12"
+                            TextColor="#828282" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+            <Grid
+                Padding="0,10"
+                RowSpacing="20"
+                ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="1.5*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Line Chart -->
+                <Border
+                    StrokeShape="RoundRectangle 3"
+                    Stroke="#EEEEEE"
+                    Margin="50,0,0,0"
+                    Padding="10">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                        <telerik:RadCartesianChart
+                            HeightRequest="250">
+                            
+                        </telerik:RadCartesianChart>
+                    </VerticalStackLayout>
+                </Border>
+                <Border
+                    Margin="0,0,50,0"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    Stroke="#e0e0e0"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 3"
+                    Padding="15">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            TextColor="Black" />
+                        <CollectionView
+                            ItemsSource="{Binding Users}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <HorizontalStackLayout
+                                        Padding="0,5">
+                                        <Border
+                                            StrokeThickness="0"
+                                            StrokeShape="RoundRectangle 15"
+                                            WidthRequest="30"
+                                            HeightRequest="30">
+                                            <Image
+                                                Source="{Binding Avatar}"
+                                                Aspect="AspectFill" />
+                                        </Border>
+                                        <VerticalStackLayout
+                                            Margin="10,0,0,0">
+                                            <Label
+                                                Text="{Binding Name}"
+                                                FontSize="12"
+                                                FontAttributes="Bold"
+                                                TextColor="Black" />
+                                            <Label
+                                                Text="{Binding Email}"
+                                                TextColor="Black"
+                                                FontSize="12" />
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+            <Grid
+                RowSpacing="20"
+                ColumnSpacing="20"
+                Padding="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="1.5*" />
+                </Grid.ColumnDefinitions>
+
+                <Border
+                    Margin="50,0,0,0"
+                    Stroke="#e0e0e0"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 3"
+                    Padding="15">
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                        <Grid
+                            ColumnDefinitions="*, 0.25*, 0.25*"
+                            Padding="0,5">
+                            <Label
+                                Text="Source"
+                                FontSize="12"
+                                FontAttributes="Bold"
+                                TextColor="#828282" />
+                            <Label
+                                Text="Sessions"
+                                FontSize="12"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="End"
+                                Grid.Column="1"
+                                TextColor="#828282" />
+                            <Label
+                                Text="Change"
+                                FontSize="12"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="End"
+                                Grid.Column="2"
+                                TextColor="#828282" />
+                        </Grid>
+                        <CollectionView
+                            ItemsSource="{Binding Sources}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <VerticalStackLayout>
+                                        <BoxView
+                                            HeightRequest="1"
+                                            BackgroundColor="#E0E0E0"
+                                            Margin="0,5"/>
+                                        <Grid
+                                            ColumnDefinitions="*, 0.25*, 0.25*"
+                                            Padding="0,5,5,5">
+                                            <Label
+                                                Text="{Binding Source}"
+                                                FontSize="12"
+                                                FontAttributes="Bold"
+                                                TextColor="Black" />
+                                            <Label
+                                                Text="{Binding Sessions}"
+                                                FontSize="12"
+                                                FontAttributes="Bold"
+                                                HorizontalTextAlignment="End"
+                                                TextColor="Black"
+                                                Grid.Column="1" />
+                                            <Label
+                                                Text="{Binding Change}"
+                                                TextColor="Black"
+                                                FontSize="12"
+                                                Grid.Column="2"
+                                                HorizontalTextAlignment="End" />
+                                        </Grid>
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Border>
+                <!-- Bar Chart -->
+                <Border
+                    Grid.Column="1"
+                    StrokeShape="RoundRectangle 3"
+                    Padding="10"
+                    Stroke="#EEEEEE"
+                    StrokeThickness="1"
+                    Margin="0,0,50,0">
+                    <VerticalStackLayout
+                        Padding="5,5,5,0">
+                        <Label
+                            Text="Title"
+                            FontSize="14"
+                            FontAttributes="Bold"
+                            TextColor="Black" />
+                        <telerik:RadCartesianChart
+                            HeightRequest="350"
+                            Margin="0,5">
+                            <telerik:RadCartesianChart.HorizontalAxis>
+                                <telerik:CategoricalAxis
+                                    LabelTextColor="Black"/>
+                            </telerik:RadCartesianChart.HorizontalAxis>
+                            <telerik:RadCartesianChart.VerticalAxis>
+                                <telerik:NumericalAxis
+                                    LabelTextColor="Black" />
+                            </telerik:RadCartesianChart.VerticalAxis>
+                            <telerik:RadCartesianChart.Series>
+                                <telerik:BarSeries
+                                    CategoryBinding="Label"
+                                    ValueBinding="Value"
+                                    ItemsSource="{Binding BarData}" />
+                            </telerik:RadCartesianChart.Series>
+                        </telerik:RadCartesianChart>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

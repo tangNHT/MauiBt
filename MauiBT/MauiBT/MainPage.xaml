@@ -36,11 +36,19 @@
                 Text="Reset"
                 Clicked="ResetCountBtn_Clicked"
                 HorizontalOptions="Center"/>
-            <Button 
-                x:Name="Musicapp"
-                Text="Mussic App"
-                Clicked="CreateNewWindow"
-                HorizontalOptions="Start"/>
+            <HorizontalStackLayout>
+                <Button
+                    x:Name="Musicapp"
+                    Text="Mussic App"
+                    Clicked="CreateNewWindow"
+                    HorizontalOptions="Start" />
+                <Button
+                    x:Name="Dashboardapp"
+                    Text="Dashboard App"
+                    Clicked="CreateNewWindowDashboradApp"
+                    Margin="10,0,0,0"
+                    HorizontalOptions="Start" />
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
