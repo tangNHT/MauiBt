@@ -242,8 +242,28 @@
                             FontAttributes="Bold"
                             TextColor="Black" />
                         <telerik:RadCartesianChart
-                            HeightRequest="250">
-                            
+                            x:Name="LineChart"
+                            HeightRequest="250"
+                            Margin="10">
+                            <telerik:RadCartesianChart.HorizontalAxis>
+                                <telerik:CategoricalAxis
+                                    LabelTextColor="Black"
+                                    PlotMode="OnTicks"/>
+                            </telerik:RadCartesianChart.HorizontalAxis>
+                            <telerik:RadCartesianChart.VerticalAxis>
+                                <telerik:NumericalAxis
+                                    LabelTextColor="Black"
+                                    LabelFormat="$#,0"
+                                    MajorStep="5000"/>
+                            </telerik:RadCartesianChart.VerticalAxis>
+                            <telerik:RadCartesianChart.Series>
+                                <telerik:LineSeries
+                                    ValueBinding="Value"
+                                    CategoryBinding="Label"
+                                    ItemsSource="{Binding LineData}"
+                                    Stroke="Black"
+                                    StrokeThickness="2" />
+                            </telerik:RadCartesianChart.Series>
                         </telerik:RadCartesianChart>
                     </VerticalStackLayout>
                 </Border>
@@ -394,15 +414,17 @@
                             FontAttributes="Bold"
                             TextColor="Black" />
                         <telerik:RadCartesianChart
+                            x:Name="BarChart"
                             HeightRequest="350"
                             Margin="0,5">
                             <telerik:RadCartesianChart.HorizontalAxis>
                                 <telerik:CategoricalAxis
-                                    LabelTextColor="Black"/>
+                                    LabelTextColor="Black" />
                             </telerik:RadCartesianChart.HorizontalAxis>
                             <telerik:RadCartesianChart.VerticalAxis>
                                 <telerik:NumericalAxis
-                                    LabelTextColor="Black" />
+                                    LabelTextColor="Black"
+                                    LabelFormat="$#,0" />
                             </telerik:RadCartesianChart.VerticalAxis>
                             <telerik:RadCartesianChart.Series>
                                 <telerik:BarSeries

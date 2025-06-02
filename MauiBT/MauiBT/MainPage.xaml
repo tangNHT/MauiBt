@@ -48,6 +48,12 @@
                     Clicked="CreateNewWindowDashboradApp"
                     Margin="10,0,0,0"
                     HorizontalOptions="Start" />
+                <Button
+                    x:Name="ChatApp"
+                    Text="Chat App"
+                    Clicked="CreateNewWindowChatApp"
+                    Margin="10,0,0,0"
+                    HorizontalOptions="Start" />
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

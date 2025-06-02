@@ -30,11 +30,6 @@ namespace MauiBT
 
 		private void CreateNewWindow(object sender, EventArgs e)
 		{
-			var page = new ContentPage
-			{
-				Content = new Label { Text = "Hello from new window" }
-			};
-
 			var page2 = new MusicApp();
 
 			var newwindow = new Window(page2)
@@ -46,12 +41,18 @@ namespace MauiBT
 		}
 		private void CreateNewWindowDashboradApp(object sender, EventArgs e)
 		{
-			var page = new ContentPage
+			var page2 = new DashboardApp();
+
+			var newwindow = new Window(page2)
 			{
-				Content = new Label { Text = "Hello from new window" }
+				Title = "Sercond window"
 			};
 
-			var page2 = new DashboardApp();
+			Application.Current.OpenWindow(newwindow);
+		}
+		private void CreateNewWindowChatApp(object sender, EventArgs e)
+		{
+			var page2 = new ChatApp();
 
 			var newwindow = new Window(page2)
 			{

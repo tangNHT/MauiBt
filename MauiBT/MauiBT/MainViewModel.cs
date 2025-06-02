@@ -45,11 +45,11 @@ namespace MauiBT
 
 			Users = new ObservableCollection<User>
 			{
-				new User("Helena", "email@figmasfakedomain.net", "image.png"),
-				new User("Oscar", "email@figmasfakedomain.net", "oscar.jpg"),
-				new User("Daniel", "email@figmasfakedomain.net", "daniel.jpg"),
-				new User("Daniel Jay Park", "email@figmasfakedomain.net", "daniel_jay_park.jpg"),
-				new User("Mark Rojas", "email@figmasfakedomain.net", "mark_rojas.jpg"),
+				new User("Helena", "email@figmasfakedomain.net", "image.png", "Will head to the Help Center"),
+				new User("Oscar", "email@figmasfakedomain.net", "oscar.jpg", "Let's go"),
+				new User("Daniel", "email@figmasfakedomain.net", "daniel.jpg", "Trueeeeeee"),
+				new User("Daniel Jay Park", "email@figmasfakedomain.net", "daniel_jay_park.jpg", "lol yeah"),
+				new User("Mark Rojas", "email@figmasfakedomain.net", "mark_rojas.jpg", "great catching"),
 			};
 
 			Sources = new ObservableCollection<TrafficSource>
@@ -82,11 +82,13 @@ public class User
 	public string Name { get; set; }
 	public string Email { get; set; }
 	public string Avatar { get; set; }
-	public User(string name, string email, string avatar)
+	public string Chat { get; set; }
+	public User(string name, string email, string avatar, string chat)
 	{
 		Name = name;
 		Email = email;
 		Avatar = avatar;
+		Chat = chat;
 	}
 }
 public class TrafficSource
