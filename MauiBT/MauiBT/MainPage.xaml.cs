@@ -34,7 +34,7 @@ namespace MauiBT
 
 			var newwindow = new Window(page2)
 			{
-				Title = "Sercond window"
+				Title = "Mussic App"
 			};
 
 			Application.Current.OpenWindow(newwindow);
@@ -45,7 +45,7 @@ namespace MauiBT
 
 			var newwindow = new Window(page2)
 			{
-				Title = "Sercond window"
+				Title = "Dashboard App"
 			};
 
 			Application.Current.OpenWindow(newwindow);
@@ -56,7 +56,18 @@ namespace MauiBT
 
 			var newwindow = new Window(page2)
 			{
-				Title = "Sercond window"
+				Title = "Chat App"
+			};
+
+			Application.Current.OpenWindow(newwindow);
+		}
+		private void CreateNewWindowTaskApp(object sender, EventArgs e)
+		{
+			var page2 = new TaskApp();
+
+			var newwindow = new Window(page2)
+			{
+				Title = "Task App"
 			};
 
 			Application.Current.OpenWindow(newwindow);

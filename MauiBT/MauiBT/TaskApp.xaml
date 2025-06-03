@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+    xmlns:vm="clr-namespace:MauiBT.ViewModel"
+    x:Class="MauiBT.TaskApp"
+    Title="TaskApp"
+    BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <vm:TaskViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <Grid
+            ColumnDefinitions="1.5*, 1, 8*">
+            <VerticalStackLayout
+                Spacing="5">
+                <Label
+                    Text="Task app"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Margin="10,15" />
+                <telerik:RadTemplatedButton
+                    BorderThickness="0">
+                    <telerik:RadTemplatedButton.Content>
+                        <HorizontalStackLayout
+                            Spacing="10">
+                            <Image
+                                Source="circle_dot_icon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Opacity="0.2" />
+                            <Label
+                                Text="Active issues"
+                                FontSize="14"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </telerik:RadTemplatedButton.Content>
+                </telerik:RadTemplatedButton>
+                <telerik:RadTemplatedButton
+                    BorderThickness="0">
+                    <telerik:RadTemplatedButton.Content>
+                        <HorizontalStackLayout
+                            Spacing="10">
+                            <Image
+                                Source="circle_dot_icon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Opacity="0.2" />
+                            <Label
+                                Text="Menu item"
+                                FontSize="14"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </telerik:RadTemplatedButton.Content>
+                </telerik:RadTemplatedButton>
+                <telerik:RadTemplatedButton
+                    BorderThickness="0">
+                    <telerik:RadTemplatedButton.Content>
+                        <HorizontalStackLayout
+                            Spacing="10">
+                            <Image
+                                Source="circle_dot_icon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Opacity="0.2" />
+                            <Label
+                                Text="Menu item"
+                                FontSize="14"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </telerik:RadTemplatedButton.Content>
+                </telerik:RadTemplatedButton>
+                <telerik:RadTemplatedButton
+                    BorderThickness="0">
+                    <telerik:RadTemplatedButton.Content>
+                        <HorizontalStackLayout
+                            Spacing="10">
+                            <Image
+                                Source="circle_dot_icon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Opacity="0.2" />
+                            <Label
+                                Text="Menu item"
+                                FontSize="14"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </telerik:RadTemplatedButton.Content>
+                </telerik:RadTemplatedButton>
+                <telerik:RadTemplatedButton
+                    BorderThickness="0">
+                    <telerik:RadTemplatedButton.Content>
+                        <HorizontalStackLayout
+                            Spacing="10">
+                            <Image
+                                Source="circle_dot_icon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                Opacity="0.2" />
+                            <Label
+                                Text="Menu item"
+                                FontSize="14"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </telerik:RadTemplatedButton.Content>
+                </telerik:RadTemplatedButton>
+            </VerticalStackLayout>
+            <BoxView
+                Grid.Column="1"
+                WidthRequest="1"
+                BackgroundColor="#E0E0E0" />
+            <VerticalStackLayout
+                Spacing="0"
+                Grid.Column="2"
+                Margin="30,10">
+                <Label
+                    Text="Active issues"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start" />
+
+                <Grid
+                    ColumnDefinitions="2*,0.5*, 1.5*, 1*">
+                    <telerik:RadBorder
+                        CornerRadius="10"
+                        BorderColor="#E0E0E0"
+                        BorderThickness="1"
+                        HeightRequest="42"
+                        HorizontalOptions="Fill"
+                        Margin="0,10,0,0">
+                        <HorizontalStackLayout
+                            VerticalOptions="Center">
+                            <Image
+                                Source="search_icon.png"
+                                HeightRequest="16"
+                                WidthRequest="16"
+                                VerticalOptions="Center"
+                                Margin="8,0,0,0"
+                                Opacity="0.2" />
+                            <Entry
+                                Placeholder="Search tickets..."
+                                TextColor="Black"
+                                PlaceholderColor="#828282"
+                                FontSize="14"
+                                HorizontalOptions="Fill"/>
+                        </HorizontalStackLayout>
+                    </telerik:RadBorder>
+                    <telerik:RadBorder
+                        Grid.Column="1"
+                        CornerRadius="10"
+                        BorderColor="#E0E0E0"
+                        BorderThickness="1"
+                        HeightRequest="42"
+                        WidthRequest="100"
+                        HorizontalOptions="Start"
+                        Margin="10,10,0,0">
+                        <HorizontalStackLayout>
+                            <Image
+                                Source="filter_funnel_icon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"
+                                VerticalOptions="Center"
+                                Margin="8,0,0,0"
+                                Opacity="0.2"/>
+                            <Entry
+                                Placeholder="Filter"
+                                TextColor="Black"
+                                PlaceholderColor="#828282"
+                                FontSize="14"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </telerik:RadBorder>
+                    <telerik:RadBorder
+                        Grid.Column="3"
+                        CornerRadius="10"
+                        BorderThickness="0"
+                        HeightRequest="36"
+                        WidthRequest="126"
+                        HorizontalOptions="End"
+                        Background="#F7F7F7"
+                        Margin="10,10,0,0">
+                        <HorizontalStackLayout
+                            Spacing="5">
+                            <Border
+                                Margin="3"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 5"
+                                Background="White">
+                                <Image
+                                    Source="list_checklist_icon.png"
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    VerticalOptions="Center"
+                                    Margin="8,0"
+                                    Opacity="0.8"/>
+                            </Border>
+                            <Border
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 3">
+                                <Image
+                                    Source="app_menu_icon.png"
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    VerticalOptions="Center"
+                                    Margin="8,0"
+                                    Opacity="0.8" />
+                            </Border>
+                            <Border
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 3">
+                                <Image
+                                    Source="calendar_icon.png"
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    VerticalOptions="Center"
+                                    Margin="8,0"
+                                    Opacity="0.8" />
+                            </Border>
+                        </HorizontalStackLayout>
+                    </telerik:RadBorder>
+                </Grid>
+
+                <CollectionView
+                    ItemsSource="{Binding Tasks}"
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"
+                    Margin="0,10,0,0">
+
+                    <CollectionView.Header>
+                        <Grid
+                            RowDefinitions="Auto,1">
+                            <Grid
+                                Grid.Row="0"
+                                Padding="10,5"
+                                ColumnDefinitions="1*, 5*, 1.5*, 1*, 1*, 1*">
+                                <Label
+                                    Text="Task"
+                                    FontAttributes="Bold"
+                                    TextColor="#828282" />
+                                <Label
+                                    Text="Title"
+                                    FontAttributes="Bold"
+                                    Grid.Column="1" />
+                                <Label
+                                    Text="Project"
+                                    FontAttributes="Bold"
+                                    Grid.Column="2" />
+                                <Label
+                                    Text="Priority"
+                                    FontAttributes="Bold"
+                                    Grid.Column="3" />
+                                <Label
+                                    Text="Date"
+                                    FontAttributes="Bold"
+                                    Grid.Column="4" />
+                                <Label
+                                    Text="Owner"
+                                    FontAttributes="Bold"
+                                    Grid.Column="5" />
+                            </Grid>
+                            <BoxView
+                                Grid.Row="1"
+                                HeightRequest="1"
+                                BackgroundColor="#E0E0E0" />
+                        </Grid>
+                    </CollectionView.Header>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid
+                                RowDefinitions="Auto,1">
+                                <Grid
+                                    Padding="10,10"
+                                    ColumnDefinitions="1*, 5*, 1.5*, 1*, 1*, 1*">
+                                    <Label
+                                        Text="{Binding Id}"
+                                        TextColor="#828282"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start" />
+
+                                    <Label
+                                        Text="{Binding Title}"
+                                        TextColor="Black"
+                                        Grid.Column="1"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start" />
+
+                                    <Border
+                                        Grid.Column="2"
+                                        Stroke="#E0E0E0"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 3"
+                                        Padding="6,2"
+                                        BackgroundColor="White"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start">
+                                        <Label
+                                            Text="{Binding Project}"
+                                            FontSize="12"
+                                            TextColor="Black" />
+                                    </Border>
+
+                                    <Border
+                                        Grid.Column="3"
+                                        Stroke="#E0E0E0"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 3"
+                                        Padding="6,2"
+                                        BackgroundColor="White"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start">
+                                        <Label
+                                            Text="{Binding Priority}"
+                                            FontSize="12"
+                                            TextColor="Black" />
+                                    </Border>
+
+                                    <Label
+                                        Text="{Binding Date, StringFormat='{0:MMM d}'}"
+                                        TextColor="Black"
+                                        Grid.Column="4"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start" />
+
+                                    <HorizontalStackLayout
+                                        Grid.Column="5"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start">
+                                        <Border
+                                            StrokeThickness="0"
+                                            StrokeShape="RoundRectangle 10"
+                                            Margin="0,0,20,0">
+                                            <Image
+                                                Source="{Binding OwnerImage}"
+                                                Aspect="AspectFill"
+                                                WidthRequest="20"
+                                                HeightRequest="20" />
+                                        </Border>
+                                        <Image
+                                            Source="dot_menu_more_option_icon.png"
+                                            WidthRequest="15"
+                                            HeightRequest="15" />
+                                    </HorizontalStackLayout>
+                                </Grid>
+                                <BoxView
+                                    Grid.Row="1"
+                                    HeightRequest="1"
+                                    BackgroundColor="#E0E0E0" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
