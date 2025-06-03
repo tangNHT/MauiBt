@@ -13,6 +13,7 @@ namespace MauiBT
 		public ObservableCollection<ChartData> BarData { get; set; }
 		public ObservableCollection<User> Users { get; set; }
 		public ObservableCollection<TrafficSource> Sources { get; set; }
+		public ObservableCollection<TimeActive> Active { get; set; }
 
 		public MainViewModel()
 		{
@@ -45,11 +46,11 @@ namespace MauiBT
 
 			Users = new ObservableCollection<User>
 			{
-				new User("Helena", "email@figmasfakedomain.net", "image.png", "Will head to the Help Center"),
-				new User("Oscar", "email@figmasfakedomain.net", "oscar.jpg", "Let's go"),
-				new User("Daniel", "email@figmasfakedomain.net", "daniel.jpg", "Trueeeeeee"),
-				new User("Daniel Jay Park", "email@figmasfakedomain.net", "daniel_jay_park.jpg", "lol yeah"),
-				new User("Mark Rojas", "email@figmasfakedomain.net", "mark_rojas.jpg", "great catching"),
+				new User("Helena", "Hills", "email@figmasfakedomain.net", "image.png", "Will head to the Help Center"),
+				new User("Oscar","Emilio", "email@figmasfakedomain.net", "oscar.jpg", "Let's go"),
+				new User("Daniel","Davis", "email@figmasfakedomain.net", "daniel.jpg", "Trueeeeeee"),
+				new User("Daniel","Jay Park", "email@figmasfakedomain.net", "daniel_jay_park.jpg", "lol yeah"),
+				new User("Mark","Rojas", "email@figmasfakedomain.net", "mark_rojas.jpg", "great catching"),
 			};
 
 			Sources = new ObservableCollection<TrafficSource>
@@ -61,6 +62,12 @@ namespace MauiBT
 				new TrafficSource("website.net", 2003, "+30%"),
 				new TrafficSource("website.net", 1894, "+15%"),
 				new TrafficSource("website.net",  405, "-12%"),
+			};
+
+			Active = new ObservableCollection<TimeActive>
+			{
+				new TimeActive("Helena", "Hills", "20m"),
+				new TimeActive("Oscar", "Emilio", "1h")
 			};
 		}
 	}
@@ -80,12 +87,15 @@ public class ChartData
 public class User
 {
 	public string Name { get; set; }
+	public string LastName { get; set; }
 	public string Email { get; set; }
 	public string Avatar { get; set; }
 	public string Chat { get; set; }
-	public User(string name, string email, string avatar, string chat)
+	public string FullName => $"{Name} {LastName}";
+	public User(string name, string lastname, string email, string avatar, string chat)
 	{
 		Name = name;
+		LastName = lastname;
 		Email = email;
 		Avatar = avatar;
 		Chat = chat;
@@ -102,5 +112,18 @@ public class TrafficSource
 		Source = source;
 		Sessions = sessions;
 		Change = change;
+	}
+}
+public class TimeActive
+{
+	public string Name { get; set; }
+	public string LastName { get; set;}
+	public string Time {  get; set; }
+	public string FullName => $"{Name} {LastName}";
+	public TimeActive(string name, string lastname, string time)
+	{
+		Name = name;
+		LastName = lastname;
+		Time = time;
 	}
 }

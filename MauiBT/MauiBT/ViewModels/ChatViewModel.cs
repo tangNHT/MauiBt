@@ -12,6 +12,7 @@ namespace MauiBT.ViewModel
 	public class ChatViewModel : INotifyPropertyChanged
 	{
 		public ObservableCollection<ChatMessage> Messages { get; set; } = new();
+		public ObservableCollection<User> Users { get; set; }
 		public ICommand SendMessageCommand { get; }
 
 		private string _newMessage;
@@ -28,6 +29,15 @@ namespace MauiBT.ViewModel
 		public ChatViewModel()
 		{
 			SendMessageCommand = new Command(SendMessage);
+
+			Users = new ObservableCollection<User>
+			{
+				new User("Helena", "Hills", "email@figmasfakedomain.net", "image.png", "Will head to the Help Center"),
+				new User("Oscar","Emilio", "email@figmasfakedomain.net", "oscar.jpg", "Let's go"),
+				new User("Daniel","Davis", "email@figmasfakedomain.net", "daniel.jpg", "Trueeeeeee"),
+				new User("Daniel","Jay Park", "email@figmasfakedomain.net", "daniel_jay_park.jpg", "lol yeah"),
+				new User("Mark","Rojas", "email@figmasfakedomain.net", "mark_rojas.jpg", "great catching"),
+			};
 		}
 
 		private void Seed()
